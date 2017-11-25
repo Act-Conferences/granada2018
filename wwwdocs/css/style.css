@@ -1,0 +1,107 @@
+html,body {
+    height:100%;
+}
+body{
+    margin:0;
+}
+.input-link {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  background-color: transparent;
+  color: inherit;
+}
+#page {
+    height:100%;
+    display:table;
+    margin:0 auto;
+    font-size: 1.3em;
+}
+#page-body {
+    width:100%;
+    display:table-row;
+}
+#main-menu .jumbotron {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+#page-footer {
+    width:100%;
+    overflow:hidden; /*for FF on Windows 7*/
+    display:table-footer-group;
+}
+#page-footer .holder {
+    height:1%;
+    display:table-row;
+}
+#page-footer .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    border-left: 0;
+    border-right: 0;
+}
+#page-footer .frame { display:table-cell;}
+/* FOR IE6/7 */
+/*
+#page-body {min-height:100%;}
+* html #page-body { height:100%;}
+#page-body .holder {padding-bottom:expression(document.getElementById("footer").offsetHeight + "px");}
+#page-footer {
+    position:relative;
+    margin-top:expression(- this.offsetHeight + "px");
+}
+*/
+
+@media(max-width:767px) {
+  .table-mobile thead { display: none }
+  .table-mobile tbody tr td { display: block !important }
+  .table-mobile tbody tr td:not(:first-child) { border: 0 }
+}
+.table .act-description label {
+  display: inline;
+}
+p.message {
+  padding: 50px 0;
+}
+
+/*~------------------------------------------------------------------*/
+/* Timetable colours                                                 */
+/*~------------------------------------------------------------------*/
+.table-schedule td.center {
+  text-align: center;
+}
+.table-schedule td {
+  border: 0 !important;
+}
+td.venue {
+  background-color: #FFCC00;
+}
+td.out {
+  background-color: #EEEEEE;
+}
+td.r1 {
+  background-color: #FFD3D3;
+}
+td.r2 {
+  background-color: #D3FFD3;
+}
+td.r3 {
+  background-color: #D3D3FF;
+}
+td.r4 {
+  background-color: #FFFFD3;
+}
+td.r5 {
+  background-color: #D3FFFF;
+}
+.mtbutton {
+  cursor:pointer;
+  vertical-align: middle;
+}
+.starcount {
+  font-size: small;
+}

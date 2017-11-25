@@ -1,0 +1,30 @@
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-newspaper-o hidden-md hidden-lg"></i><span class="hidden-sm"> {{News}}</span> <b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+[% WRAPPER menus/item %]
+<a href="[% make_uri('news') %]">{{News}}</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="http://blogs.perl.org/users/yapceu/" target="_blank">Blog</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="https://twitter.com/yapceu"  target="_blank">Twitter</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="https://www.facebook.com/YAPCEurope"  target="_blank">Facebook</a>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="https://plus.google.com/105385084841267530672/"  target="_blank">Google+</a>
+[% END %]
+[% IF global.request.user.is_news_admin %]
+[% WRAPPER menus/item %]
+<li class="divider"></li>
+[% END %]
+[% WRAPPER menus/item %]
+<a href="[% make_uri('newsadmin') %]">{{News Administration}}</a>
+[% END %]
+[% END %]
+</ul>
+</li>

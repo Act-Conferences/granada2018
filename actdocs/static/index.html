@@ -1,0 +1,127 @@
+[% WRAPPER ui banner = 1 %]
+
+[% news = global.news(3);
+   IF news.size > 2;
+     more = news.pop;
+   END;
+ %]
+
+<div class="row">
+  <div class="col-md-8">
+    <h2 class="page-header">
+    [% IF more %]
+      <a href="[% make_uri('news') %]" class="btn btn-default pull-right">Older announcements <i class="fa fa-chevron-right"></i></a>
+    [% END %]
+      Latest News <a href="/ye2015/atom/en.xml"><img src="/ye2015/img/rss.png" height="40"></a>
+    </h2>
+    [% FOREACH item = news %]
+    <div class="news-entry">
+      <div class="news-head">
+        <h3>[% item.title %] </h3>
+        <p>By [% user_info(item.user) %] on [% date_format(item.datetime, 'datetime_short') %]</p>
+      </div>
+      <div class="news-content">[% item.content %]</div>
+    </div>
+    [% END %]
+   </div>
+   <div class="col-md-4">
+     <h2 class="page-header">Platinum sponsors</h2>
+     <div style="width:100%; height:100px; margin:5px 0;">
+       <a href="http://cpanel.net" title="cPanel: Web Hosting Management, Simplified">
+         <img src="/ye2015/img/cPanel-Logo.png" alt="cPanel" style="width: 100%">
+       </a>
+     </div>
+
+     <h2 class="page-header">Golden sponsors</h2>
+
+
+     <div style="display:inline-block; background:#003580; width:100%; height:100px; margin:5px 3% 5px 0;">
+        <a href="http://booking.com" title="601,000+ hotels, apartments, villas and more …"><img src="http://q-ec.bstatic.com/static/img/b26logo/booking_logo_retina/22615963add19ac6b6d715a97c8d477e8b95b7ea.png" style="width: 100%"></a>
+     </div>
+
+     <!--
+     <div style="display:inline-block; background:#eee; width:47%; height:100px; margin:5px 0;">
+        <a href="http://soysuper.com" title="SoySuper: Tu supermercado online. Fácil, fácil."><img src="/ye2015/img/soysuper.jpg" style="width: 100%"></a>
+     </div>
+      -->
+     <h2 class="page-header">Silver sponsors</h2>
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+      <a href="http://www.yapceurope.org/" title="YAPC Europe Foundation"><img src="/ye2015/img/yef.png" style="width: 100%"></a>
+     </div>
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+      <a href="http://www.eligo.co.uk/technology" title="Eligo Perl Recruitment | Perl jobs"><img src="/ye2015/img/eligo.jpg" style="width: 100%" alt="Perl Jobs" title="Eligo Perl Recruitment"></a>
+    </div>
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+         <a href="/ye2015/sponsors/capside.html" alt="http://capside.com/en/" title="capside: We are Perl powerusers SysOps engineers! We focus on performance & scalability for business-critical platforms. We design, deploy & manage 24x7 the systems architectures that empower companies’ businesses."><img src="/ye2015/img/capside-small-logo.png" style="width: 100%"></a>
+     </div>
+
+     <h2 class="page-header">Bronze sponsors</h2>
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+         <a href="http://www.perl.careers/" title="Perl Careers: Perl-focused recruitment consultancy, run by a CPAN contributor with a recruitment background, rather than by a non-technical person. I can understand the skills you're looking to hire for, make sense of your GitHub profile, and offer specific Perl-related career and salary advice."><img src="/ye2015/img/perlcareers_logo_blue.svg" style="width: 100%"></a>
+     </div>
+
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+       <a href="https://kyup.com/" title="Kyup is a cloud hosting platform built on elastic containers. We offer secure production-ready Linux containers with SSD storage to provide users with a resource-efficient, instantly-scalable and highly-redundant cloud hosting for their apps and web projects."><img src="http://act.yapc.eu/ye2015/img/kyup_logo_new_colored.svg" style="width: 100%"></a>
+     </div>
+
+     <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+       <a href="https://multisafepay.com/" title="MultiSafepay is one of the fastest growing payment service providers in Europe.
+       We are currently seeking strong applicants for various SENIOR PERL DEVELOPER job openings.
+       Join a highly motivated & professional team while enjoying a Mediterranean lifestyle with 320 days of sunshine a year at our international office based in the south of Spain between Estepona & Marbella.
+       Be our guest!
+       Selected candidates will be invited to stay in a hotel (all expenses paid) near our International Office to meet the team & discover more about MultiSafepay.
+       Contact us today:
+       Telephone: +34 911 230 486
+       info@multisafepay.es"><img src="http://act.yapc.eu/ye2015/img/multisafepay.png" style="width: 100%"></a>
+     </div>
+     
+        <div style="display:inline-block; background: inherit; width:47%; height:80px; margin:5px 1% 5px 0;">
+       <a href="http://www.perl6.org/" title="Perl 6 intends to carry forward the high ideals of the Perl community. 
+       Perl 6 is currently being developed by a team of dedicated and enthusiastic volunteers">
+          <img src="http://act.yapc.eu/ye2015/img/Camelia.png" style="width: 100%"></a>
+     </div>
+
+
+     <!--<div style="display:inline-block; background:#eee; width:31%; height:80px; margin:5px 0;"></div>-->
+     <h2 class="page-header">Sponsors</h2>
+     <div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+        <a href="http://www.ugr.es" title="Universidad de Granada"><img src="http://masteres.ugr.es/ugrme/pages/logougr/!" style="width: 100%"></a>
+      </div>
+     <div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+         <a href="http://www.perl-academy.de" title="Perl-Academy.de"><img src="/ye2015/img/pa-logo.jpg" style="width: 100%"></a>
+       </div>
+     <div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+      <a href="http://codeko.com" title="Codeko: desarrollo de software y diseño de páginas webs.">
+        <img src="http://codeko.com/wp-content/uploads/2014/06/codekologopuntocom.png" style="width: 100%">
+      </a>
+    </div>
+      <div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+          <a href="https://geizhals.de/" title="Geizhals Preisvergleich">
+              <img src="/ye2015/img/geizhals_logo.svg" style="width: 100%">
+          </a>
+      </div>
+
+     <div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+      <a href="http://si2.info"
+title="SI2Soluciones: Desarrollo web y Apps para empresas y profesionales"><img src="http://si2.info/wp-content/uploads/2014/09/logoSI2-2014.png" style="width: 100%"></a>
+     </div>
+
+
+<div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+    <a href="http://www.qindel.com/en/" title="QindelGroup: Consultoría tecnológica y virtualización de escritorios"><img src="http://www.qindel.com/wp-content/uploads/2013/03/logo-qindel-group-300x48.png" style="width: 100%; height: 60px;"></a>
+</div>
+
+<div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+    <a href="https://www.evozon.com/" title="Evozon: custom software solutions, business analysis, project management and quality assurance across the widest possible range of technologies and platforms"><img src="https://www.evozon.com/wp-content/uploads/2013/04/logozon.png" style="width: 100%; height: 60px;"></a>
+</div>
+<div style="display:inline-block; background: inherit; width:47%; height:60px; margin:5px 1% 5px 0;">
+    <a href="https://www.alsa.es/en" title="Alsa: Making travel simpler"><img src="/ye2015/img/logo.alsa.jpg" style="width: 100%; height: 60px;"></a>
+</div>
+
+    <div style="display:inline-block; background: inherit; width:100%; height:60px; margin:5px 1% 5px 0;">
+          <a href="http://act.yapc.eu/ye2015/wiki?node=Sponsor%20Us"><strong>Become our sponsor!</strong></a>
+        </div>
+   </div>
+</div>
+
+[% END %]

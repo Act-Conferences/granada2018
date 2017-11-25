@@ -1,0 +1,16 @@
+[% WRAPPER ui title = loc("News") %]
+[% IF news.size %]
+  [% FOREACH item = news %]
+  <div class="news-entry">
+    <div class="news-head">
+      <h3>[% item.title %]</h3>
+      <p>By [% user_info(item.user) %] on <a href="[% item.link %]">[% date_format(item.datetime, 'datetime_short') %]</a></p>
+    </div>
+    <div class="news-content">[% texts.${loop.index} %]</div>
+  </div>
+  [% END %]
+[% ELSE %]
+  <div class="alert alert-warning">{{No news yet!}}</div>
+[% END %]
+[% END %]
+<!-- <a href="/ye2015/atom/en.xml"><img src="/ye2015/img/rss.png"></a> -->
