@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"> <!-- -*- mode:html -->
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-options">
@@ -13,6 +13,7 @@
   <div class="collapse navbar-collapse" id="nav-menu-options">
     <ul class="nav navbar-nav">
       [% PROCESS menus/conference %]
+      [% PROCESS menus/news %]
       [% PROCESS menus/talks %]
       [% PROCESS menus/sponsors %]
       [% PROCESS menus/users %]
