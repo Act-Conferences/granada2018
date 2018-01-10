@@ -13,4 +13,4 @@
   <div class="alert alert-warning">{{No news yet!}}</div>
 [% END %]
 [% END %]
-<!-- <a href="/ye2015/atom/en.xml"><img src="/ye2015/img/rss.png"></a> -->
+<!-- <a href="/granada2018/atom/en.xml"><img src="/granada2018/img/rss.png"></a> -->
